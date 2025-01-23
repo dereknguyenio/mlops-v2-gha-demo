@@ -39,6 +39,10 @@ jobs:
   deploy-azureml-resources:
     runs-on: ubuntu-latest
     steps:
+    - name: Set up Azure CLI
+      uses: azure/CLI@v1
+      with:
+        azcliversion: '2.42.0'
     - id: deploy-aml-workspace
       name: deploy-aml-workspace
       run: echo "OK"
