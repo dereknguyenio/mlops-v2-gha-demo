@@ -6,12 +6,12 @@ env:
     config_env: 'none'
 jobs:
   get-config:
-      uses: Azure/mlops-templates/.github/workflows/read-yaml.yml@main
+      uses: dereknguyenio/mlops-templates/.github/workflows/read-yaml.yml@main
       with:
         file_name: config-infra-prod.yml
   test-terraform-state-deployment:
     needs: get-config
-    uses: Azure/mlops-templates/.github/workflows/tf-gha-install-terraform.yml@main
+    uses: dereknguyenio/mlops-templates/.github/workflows/tf-gha-install-terraform.yml@main
     with:
       TFAction: 'apply'
       dply_environment: ${{ needs.set-env-branch.outputs.config-file }} 
