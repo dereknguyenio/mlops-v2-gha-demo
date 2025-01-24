@@ -13,5 +13,6 @@ dependencies:
       - pandas==1.2.1
       - joblib==1.0.0
       - matplotlib==3.3.3
+      - azureml-inference-server-http==1.37.0
       - git+https://github.com/microsoft/AzureML-Observability#subdirectory=aml-obs-client
       - git+https://github.com/microsoft/AzureML-Observability#subdirectory=aml-obs-collector
